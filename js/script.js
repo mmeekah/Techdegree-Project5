@@ -124,7 +124,7 @@ function filterResults(){
     for(let i=0; i<cards.length; i++){
 
         const fullname = cards[i].children[1].children[0].textContent;
-        cards[i].style.display=(fullname.search(value)=== -1) ? "none" : "";
+        cards[i].style.display=(fullname.search(value)=== -1) ? "none " : "value";
 
     }
 }
@@ -144,7 +144,7 @@ function getModalContent(user, dateOfBirth){
            <p class="modal-text cap">${user.location.city}</p>
            <hr>
            <p class="modal-text">${user.phone}</p>
-           <p class="modal-text">${user.location.street}, ${user.location.state}, ${user.location.postcode}</p>
+           <p class="modal-text">${user.location.street.number} ${user.location.street.name}, ${user.location.state}, ${user.location.postcode}</p>
            <p class="modal-text">Birthday: ${dateOfBirth}</p>
        </div>
     </div>
